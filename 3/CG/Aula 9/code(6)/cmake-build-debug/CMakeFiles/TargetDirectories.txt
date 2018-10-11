@@ -1,0 +1,3 @@
+/home/d3/Documents/CG/Aula 9/code(6)/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/d3/Documents/CG/Aula 9/code(6)/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/d3/Documents/CG/Aula 9/code(6)/cmake-build-debug/CMakeFiles/class9.dir

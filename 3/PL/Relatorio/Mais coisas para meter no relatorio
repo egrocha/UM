@@ -1,0 +1,29 @@
+-- NO FIM DA INTRODUCAO
+
+Com o fecho da introdução deste relatório, é adequado mencionar a estrutura do mesmo. Este relatório contém o resumo do trabalho que foi realizado durante o período dado para tal, a descrição e a implementação dos dois exercícios que compõem o trabalho prático (incluíndo a linha de pensamento seguida pelo grupo, bem como imagens que ajudam à interpretação), e no final, uma pequena conclusão que reflete o trabalho realizado.
+
+-- FIM DA CONCLUSAO
+
+Podemos afirmar que, no primeiro exercício, o grupo não sentiu grandes dificuldades na sua implementação, no entanto, o mesmo não se passou no exercício dois, pelas razões já referenciadas acima.
+Em suma, estamos satisfeitos com o trabalho realizado até então, sendo que o grupo se sente preparado para, após este desenvolvimento dos conhecimentos em AWK que irão ser importantes no futuro, aprender e estudar uma nova ferramenta de trabalho, na qual se vai basear o próximo projeto prático.
+
+VAI FALTAR FALAR DO EXERCICIO 2, NEM QUE SEJA EM PSEUDO-CODIGO.
+
+-- Exercicio 2
+
+O método que adotamos para resolver este problema foi o de, uma vez que as legendas têm todas um identificador que a caracteriza, alterar os timestamps consoante estes IDs.
+Ou seja, se existe legendas com o mesmo identificador em ambos os ficheiros, isto quer dizer que estas legendas são iguais (apesar de estarem em linguagens diferentes).
+
+Assim, a função que implementamos pode receber 7 argumentos : identificador da primeira legenda no ficheiro original, identificador da primeira legenda no ficheiro que vai ser consultado e alterado, identificador da última legenda no ficheiro original, identificador da última legenda a ser alterada no ficheiro, os nomes do ficheiro original, do ficheiro alterado, e por fim, do ficheiro onde tudo vai ser guardado.
+
+(INSERIR IMAGEM 9)
+
+A nossa implementação começa com uma cadeia de ifs e elses. Isto, traduzido, quer dizer que: se i1 for igual a i2, e f1 for igual a f2, então a função ficheiro não é necessária ser executada. No entanto, se a primeira condição for falsa mas f1 igual a f2, então não se deve, novamente, executar a função ficheiro, uma vez que daria um erro de divisão por 0. Por fim, se todos estas condições forem falsas, aí é executada a função ficheiro, disponibilizada pelo professor da disciplina.
+
+Depois disto, parte-se para a função alteraTimestamp, que recebe todos os dados disponíveis como argumento.
+Aqui, percorre-se as legendas dos dois ficheiros de uma forma simultânea. Assim, retira-se o identificador de ambas as legendas, e compara-se. Se estes forem iguais e estiverem dentro do limite criado pelos argumentos ([i1, f1] para a legenda do ficheiro original, [i2, f2] para a legenda do ficheiro a alterar) e copia-se o timestamp da legenda do ficheiro original.
+Com todos os dados necessários, imprime-se todos eles: identificador da legenda do ficheiro alterado, novo timestamp e, também, a legenda do ficheiro alterado (o texto da legenda não sofre qualquer alteração neste processo). 
+
+Todas as legendas percorridas, obtemos que, dentro dos limites impostos pelo utilizador, as legendas com identificadores iguais possuem o mesmo tempo de início e de fim.
+
+Como o grupo não conseguiu implementar a 100% as funções deste exercício, escolhemos traduzir a nossa linha de pensamento através de pseudo-código, como se pode observar na função alteraTimestamp. Deste modo, não somos capazes de forneces um exemplo do resultado final, à semelhança de como foi feito no exercício anterior.

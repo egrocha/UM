@@ -1,0 +1,19 @@
+%option noyywrap yylineno
+
+%%
+
+
+escrever         return ESCREVER;
+if               return IF;
+then             return THEN;
+else             return ELSE;
+while 			 return WHILE;
+[0-9]+           {yylval.i = atoi(yytext); return INT;}
+[*+-/\[\]\n=?()] {return yytext[0];}
+[a-z]+           {yylval.s = strdup(yytext); return VAR;}
+[ \t]+           ;
+\/\/.*           ;
+.                {yyerror("Invalid char\n");}
+
+
+%%

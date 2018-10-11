@@ -1,0 +1,43 @@
+Este comando lista os ficheiros:
+$ ls
+>>>
+a.out
+exemplo
+exemplo.
+exemplo2.nb
+exemplo.c
+exemplo.nb
+Makefile
+notebook
+pipe.txt
+processador.c
+processador.h
+RelatiorioSOGrupo10.pdf
+temp.txt
+TPSOGrupo10
+TPSOGrupo10.zip
+<<<
+Agora podemos ordenar estes ficheiros:
+$| sort
+>>>
+a.out
+exemplo
+exemplo.
+exemplo2.nb
+exemplo.c
+exemplo.nb
+Makefile
+notebook
+pipe.txt
+processador.c
+processador.h
+RelatiorioSOGrupo10.pdf
+temp.txt
+TPSOGrupo10
+TPSOGrupo10.zip
+<<<
+E escolher o primeiro:
+$| head -1
+>>>
+a.out
+<<<

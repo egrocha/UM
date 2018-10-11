@@ -1,0 +1,2 @@
+if 0 then escrever 1+1 else escrever 100+100
+a = 3

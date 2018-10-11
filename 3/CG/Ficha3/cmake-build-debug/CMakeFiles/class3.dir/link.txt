@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/class3.dir/main.cpp.o  -o class3 -lGLU -lGL -lglut 

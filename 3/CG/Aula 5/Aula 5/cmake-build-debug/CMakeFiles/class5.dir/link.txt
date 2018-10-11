@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/class5.dir/main.cpp.o  -o class5 -lGLU -lGL -lglut 

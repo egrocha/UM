@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/d3/Documents/CG/Ficha3/main.cpp
+GLUT/glut.h
+-
+GL/glew.h
+-
+GL/glut.h
+-
+math.h
+-
+iostream
+-
+

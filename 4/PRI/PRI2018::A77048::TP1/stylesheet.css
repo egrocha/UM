@@ -1,0 +1,37 @@
+body {
+	background-color: #4ABDAC;
+}
+a {
+	font-family: "Arial", Arial, sans-serif;
+	font-size: 25px;
+	color: #F78733;
+}
+h1 {
+	text-align: center;
+	font-size: 45px;
+	color: #FC4A1A;
+	font-family: "Arial", Arial, sans-serif;
+}
+p {
+	font-size: 17px;
+	color: #FFFCE3;
+	font-family: "Arial", Arial, sans-serif;
+}
+h2 {
+	font-size: 25px;
+	color: #FFFCE3;
+	font-family: "Arial", Arial, sans-serif;
+}
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.center {
+	text-align: center;
+	width: 100%;
+}
+.resize {
+  max-width:50%;
+  max-height:50%;
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/awf -f
+
+BEGIN {FS = "::"
+	f="<li><a href='%s.html'> %s </a></li> \n"
+	evo = "http://natura.di.uminho.pt/~jj/arqevo/"
+	print "<html><head><meta charset='UTF-8'></head>\n"> "indicegeral.html"
+}
+!c[$1] {c[$1]++; 
+		printf (f, ".html", $1) > "indicegeral.html"
+		print "<html><head><meta charset='UTF-8'></head>\n" > $1 ".html"}
+NF==7 {print (f,evo $5,$3) > $1 ".html"}
+#END {for(p in c)print p,c[p]}

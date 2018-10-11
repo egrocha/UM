@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT pn (estado,classePai,código,título,descritivo,contexto,decisões) >
+<!ELEMENT estado (#PCDATA) >
+<!ELEMENT classePai (códigoClasse,nomeClasse) >
+<!ELEMENT códigoClasse (#PCDATA) >
+<!ELEMENT nomeClasse (#PCDATA) >
+<!ELEMENT código (#PCDATA) >
+<!ELEMENT título (#PCDATA) >
+
+<!ELEMENT descritivo (descrição,notas,exemplosNotas,notasExclusão,termosÍndice) >
+<!ELEMENT descrição (#PCDATA) >
+<!ELEMENT notas (nota*) >
+<!ELEMENT nota (#PCDATA) >
+<!ELEMENT exemplosNotas (exemploNotas*) >
+<!ELEMENT exemploNotas (#PCDATA) >
+<!ELEMENT notasExclusão (notaExclusão*) >
+<!ELEMENT notaExclusão (#PCDATA) >
+<!ELEMENT termosÍndice (termoÍndice*) >
+<!ELEMENT termoÍndice (#PCDATA) >
+
+<!ELEMENT contexto (tipoProcesso,processoTransversal,donos,tiposIntervenção?,processosRel,legislações) >
+<!ELEMENT tipoProcesso (#PCDATA) >
+<!ELEMENT processoTransversal (#PCDATA) >
+
+<!ELEMENT donos (dono+) >
+<!ELEMENT dono (nomeDono,descDono) >
+<!ELEMENT nomeDono (#PCDATA) >
+<!ELEMENT descDono (#PCDATA) >
+
+<!ELEMENT processosRel (procAnt?, procComp?, procCruz?, procSuc?, procSup?,procSintese?,procSintetizado?) >
+<!ELEMENT procAnt (processo+) >
+<!ELEMENT procComp (processo+) >
+<!ELEMENT procCruz (processo+) >
+<!ELEMENT procSuc (processo+) >
+<!ELEMENT procSup (processo+) >
+<!ELEMENT procSintese (processo+) >
+<!ELEMENT procSintetizado (processo+) >
+<!ELEMENT processo (idProc, descProc) >
+<!ELEMENT idProc (#PCDATA) >
+<!ELEMENT descProc (#PCDATA) >
+
+<!ELEMENT legislações (legislação*) >
+<!ELEMENT legislação (categoria,idLegislação,descLegislação) >
+<!ELEMENT categoria (#PCDATA) >
+<!ELEMENT idLegislação (#PCDATA) >
+<!ELEMENT descLegislação (#PCDATA) >
+
+<!ELEMENT decisões (prazoConservação,destinoFinal) >
+<!ELEMENT prazoConservação (prazo,formaContagem,justificação) >
+<!ELEMENT prazo (#PCDATA) >
+<!ELEMENT formaContagem (#PCDATA) >
+<!ELEMENT justificação (critérioLegal, critérioUtilidade) >
+<!ELEMENT critérioLegal (#PCDATA) >
+<!ELEMENT critérioUtilidade (#PCDATA) >
+
+<!ELEMENT destinoFinal (destino,justificaçãoDestino) >
+<!ELEMENT destino (#PCDATA) >
+<!ELEMENT justificaçãoDestino (critérioCompl,critérioDensidade) >
+<!ELEMENT critérioCompl (#PCDATA) >
+<!ELEMENT critérioDensidade (#PCDATA) >

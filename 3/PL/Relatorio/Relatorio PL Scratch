@@ -1,0 +1,88 @@
+Trabalho Prático PL
+Processamento de Linguagens
+
+Grupo:
+André Filipe Ferreira de Mira Vieira
+Eduardo Gil Ribeiro Rocha A77048
+Ricardo André Araújo Neves A78764
+
+Data:
+24-03-2018
+
+-> Introdução
+
+Este trabalho prático foi realizado no ambito da Unidade Curricular de Processamento de Linguagens.
+Aqui, iremos dicutir toda a estratégia e linha de pensamento que o grupo tomou, de modo a cumprir os requisitos pedidos.
+
+Uma vez que o menor número mecanográfico é igual a 77048, e ao dividir este mesmo número por 5, constatamos que o resto desta operação é igual a 3, que corresponde ao algarismo do enunciado pertencente.
+Deste modo, o grupo constatou que o enunciado atribuido foi o 2.3 - Processador / sincronizador de legendas.
+Este trabalho engloba, em geral, 2 exercícios distintos, que iremos mencionar mais à frente, em pormenor.
+O objetivo máximo do grupo em relação a este trabalho foi o de realizar os dois exercicios pedidos com a maior eficiência, ganhando, assim, experiência e conhecimento em relação à ferramenta AWK, que irá ser importante no seguimento desta Unidade Curricular. Esta ferramenta permite manipular o texto de ficheiros, pesquisar e obter apenas certas palavras que estão contidas no mesmo, entre várias outas funcionalidades. Assim, este trabalho baseou-se na exploração destas mesmas funcionalidades que o AWK nos oferece.
+
+--> Resumo
+
+Este trabalho prático resume-se, então, à manipulação de legendas de filmes. 
+Todas as legendas disponibilizadas seguem o seguinte formato:
+
+(INSERIR IMAGEM 1)
+
+Como se pode observar na imagem acima, cada legenda apresenta o número que a caracteriza.
+Na linha abaixo, podemos ver também o tempo de início e de fim da legenda. Ou seja, o tempo onde a mesma aparece e desaparece durante o percurso do filme. Se quisermos obter o tempo que a legenda manteu-se visível ao espectador, é necessário fazer a subtração entre o segundo número e o primeiro.
+Por fim, vemos o corpo da legenda, isto é, o texto que fica visível ao utilizador.
+
+Este template repete-se para todas as legendas diponíveis, o que facilitou o trabalho do grupo de certo modo, o que permite percorrer todas elas de uma forma semelhante.
+
+-> Exercício 1
+
+Este primeiro de dois exercícios desafiou o grupo de trabalho a transformar o modo como as legendas aparecem no ficheiro original.
+
+Assim, o grupo construiu um processador que retira os identificadores das legendas, ou seja, a primeira linha de cada uma, coloque as legendas numa única linha, juntando-as com o caracter '|', e marcar com os caracteres '=' todos os intervalos de tempo com mais de 2 segundos de silencio.
+
+Deste modo, foi contruída esta ferramenta.
+
+(INSERIR IMAGEM 2)
+
+Ao observar atentamente o ficheiro das legendas original, constatamos que todos os tempos começavam com o algarismo 0. Deste modo, de modo a não imprimir o número que caracteriza a legenda, implementamos que, se a linha começar por 0, irá ser imprimida. No entanto, é aplicada a função auxiliar timeSilence, que irá ser explicada mais tarde.
+De seguida, é necessário imprimir o texto da legenda. Assim, se a legenda contiver uma letra, também será imprimida. No entanto, se de seguida, for encontrada outra legenda (a sua segunda parte), irá ser imprimido o caracter '|', e só depois a segunda linha da mesma.
+
+Falando um pouco acerca da função auxiliar timeSilence, este é o método que nos permite avaliar se existe alguem tempo de silêncio com uma duração maior do que 2 segundos.
+Assim, esta função receve dois argumentos: o tempo final da primeira legenda, e o tempo inicial da segunda legenda. Como já foi mencionado, é aqui que estes tempos são subtraídos. Se este resultado for maior do que 2, uma série de caracteres '=' irão ser imprimidos, o que quer dizer que houve um tempo de silencio durante esta parte do filme. Se isto não se constatar, então o programa não imprimirá nada.
+
+
+Esta imagem representa as legendas no ficheiro original do filme Harry Potter:
+
+(INSERIR IMAGEM 3)
+
+Com a função implementada, corremos este comando AWK no terminal:
+
+(INSERIR IMAGEM 4)
+
+De imediato, recebemos o resultado final da transformação que foi executada:
+
+(INSERIR IMAGEM 5)
+
+Para ter a certeza que tudo estava a funcionar corretamente, testamos o mesmo procedimento nas legendas do filme Ted:
+
+(INSERIR IMAGEM 6)
+
+Correndo o comando gawk, é devolvido o seguinte resultado:
+
+(INSERIR IMAGEM 7)
+
+Como se pode observar nas legendas processadas acima, não existe qualquer tempo de silêncio presente nas legendas do filme Ted. Isto deve-se ao facto de, neste caso, quando uma legenda acaba, a seguinte aparece no ecrã, instantaneamente.
+Outro facto acerca destas legendas é que o seu corpo apenas apresenta uma linha. Ou seja, não existe, no filme Ted, legendas com 2 linhas, como acontecia no caso do filme do Harry Potter.
+
+
+Todas as legendas sofreram as transformações acima referidas. 
+Assim sendo, o grupo concluiu o primeiro de dois exercícios do trabalho prático. 
+
+--> Exercício 2
+
+Desde que começamos este segundo exercício, sentimos que o grau de dificuldade aumentou substancialmente. Isto deve-se, grande parte, ao facto de não ter-mos compreendido o enunciado do trabalho da melhor forma.
+Assim, este último exercício pedia que fosse implementado um sincronizador de legendas. Ou seja, dados dois ficheiros com legendas do mesmo filme, colocar as legendas semelhantes entre os dois ficheiros com o mesmo tempo de início e de fim, como se pode ver neste esquema.
+
+(INSERIR IMAGEM 8)
+
+--> Conclusão
+
+Com este trabalho prático, adquirimos e, maioritariamente, aprofundamos os nossos conhecimentos acerca da ferramenta denominada AWK. Com isto, constatamos todo o poder que esta ferramenta dos sistemas Unix nos pode oferecer, sendo que agora, com estes exercícios, conseguimos dominar melhor esta linguagem de programação de processamento de texto.

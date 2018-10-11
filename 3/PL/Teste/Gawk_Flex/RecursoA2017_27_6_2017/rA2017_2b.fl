@@ -1,0 +1,21 @@
+%option noyywrap
+
+%{
+char* nome;
+
+%}
+
+
+%%
+
+[ ].*/\(        { printf("%s",yytext); nome = strdup(yytext + 1); }
+
+\{              { printf("{\nFILE* trace = fopen(\"Boas\",\"a+\");\n") ;
+                  printf( "fprintf(trace,\"Vai iniciar-se a execução da função %s\");", nome ); }
+
+%%
+
+int main(int argc, char* argv){
+    yylex();
+    return 0;
+}

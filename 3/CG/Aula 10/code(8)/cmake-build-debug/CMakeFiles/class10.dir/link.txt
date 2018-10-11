@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/class10.dir/main.cpp.o  -o class10 -lGLEW -lIL -lGLU -lGL -lglut 

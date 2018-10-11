@@ -1,0 +1,74 @@
+a) 
+Conteúdo:
+	nameserver 127.0.1.1
+	search eduroam.uminho.pt
+Para que serve:
+	O nameserver é um servidor especialiado que irá processar pedidos enviados pelo nosso sistema, para poder clarificar a localização de serviços de um nome de domínio. O endereço especificado no ficheiro resolv.conf indica qual o servidor com que a nossa máquina deverá comunicar.
+	O campo search indica o nosso domínio. Quando realizamos uma query com número de dots menor que ndots, o nome de domínio é automaticamente adicionado à nossa query. No nosso caso, o nome a ser adicionado será eduroam.uminho.pt.
+
+b)
+Comandos utilizados:
+	host www.google.pt
+	host www.google.com
+Resultados:
+	Os dois sites, www.google.pt e www.google.com, têm endereços IPv6, sendo estes respectivamente: 2a00:1450:4003:809::2003 e 2a00:1450:4003:809::2004.
+
+c)
+O comando usado para obter as respostas foi o nslookup.
+Para domínio "ccg.pt.":
+	ccg.pt nameserver = ns3.ccg.pt.
+	ccg.pt nameserver = ns1.ccg.pt.
+Para domínio "pt.":
+	pt nameserver = c.dns.pt.
+	pt nameserver = d.dns.pt.
+	pt nameserver = a.dns.pt.
+	pt nameserver = b.dns.pt.
+	pt nameserver = sns-pb.isc.org.
+	pt nameserver = ns.dns.br.
+	pt nameserver = ns2.dns.pt.
+	pt nameserver = ns2.nic.fr.
+	pt nameserver = e.dns.pt.
+Para domínio ".":
+	. nameserver = f.root-servers.net.
+	. nameserver = l.root-servers.net.
+	. nameserver = h.root-servers.net.
+	. nameserver = m.root-servers.net.
+	. nameserver = e.root-servers.net.
+	. nameserver = d.root-servers.net.
+	. nameserver = k.root-servers.net.
+	. nameserver = j.root-servers.net.
+	. nameserver = b.root-servers.net.
+	. nameserver = c.root-servers.net.
+	. nameserver = i.root-servers.net.
+	. nameserver = g.root-servers.net.
+	. nameserver = a.root-servers.net.
+
+d)
+Pelo comando "host eureka.software.":
+	eureka.software has address 104.196.112.191
+Logo, podemos verificar que o domínio "eureka.software." existe. Por ter IP, podemos dizer que o domínio é host.
+
+e)
+Pelo comando nslookup no endereço "ami.pt." com type=SOA, verificamos que tem servidor DNS primário (origin) ns1.ami.pt. Com o mesmo comando verificamos também que podemos extrair respostas autoritativas de ns1.ami.pt.
+Utilizando o comando "nslookup -all ns1.ami.pt" verificamos a opção search está em modo "recurse", logo podemos afirmar que o servidor primário aceita recursivas.
+
+f)
+Usando o comando nslookup (type=MX), podemos verificar que os e-mails enviados para marcelo@presidencia.pt são entregues a mail1.presidencia.pt e mail2.presidencia.pt.
+
+g)
+Usando o comando "host www.whitehouse.gov" podemos verificar que www.whitehouse.gov é um alias para wildcard.whitehouse.gov.edgekey.net, que por si é um alias para e4036.dscb.akamiedge.net.
+Podemos também verificar que e4036.dscb.akamaiedge.net tem endereço IPv4 23.45.236.110.
+
+h)
+Com o comando nslookup em type=SOA conseguimos, através do endereço IPv6, descobrir vários nameservers, endereços IPv4 e endereços IPv6.
+Output:
+	0.9.6.0.1.0.0.2.ip6.arpa nameserver = ns03.fccn.pt.
+	0.9.6.0.1.0.0.2.ip6.arpa nameserver = ns02.fccn.pt.
+	0.9.6.0.1.0.0.2.ip6.arpa nameserver = ns01.fccn.pt.
+	ns01.fccn.pt internet address = 193.136.192.40
+	ns02.fccn.pt internet address = 193.136.2.228
+	ns03.fccn.pt internet address = 138.246.255.249
+	ns01.fccn.pt has AAAA address 2001:690:a00:4001::200
+	ns01.fccn.pt has AAAA address 2001:690:a80:4001::200
+	ns01.fccn.pt has AAAA address 2001:4ca0:106:0:250:56ff:fea9:3fd
+Conseguimos encontrar também o endereço da entidade responsável pelo endereço IPv6: www.fccn.pt.

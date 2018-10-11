@@ -1,0 +1,16 @@
+start 
+pushn 1 
+pushi 2
+pushi 2
+add
+pushi 5
+pushi 5
+sub 
+add 
+writei  
+read 
+atoi 
+storeg 0 
+pushg 0 
+writei 
+stop

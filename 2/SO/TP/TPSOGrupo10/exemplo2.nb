@@ -1,0 +1,4 @@
+Este comando apresenta os conteúdos da Makefile:
+$ cat Makefile
+Ultima linha:
+$| tail -1

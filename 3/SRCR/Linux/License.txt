@@ -1,0 +1,43 @@
+Your license information for platform 'solaris' is as follows:
+Decryption key: hhnjqpvamtid
+Site name:  studentSP4.3di.uminho.pt
+License code: 885b-bd4p-cx46-a9yc-uxa8
+Expiration date: permanent
+This information is entered either during installation or by modifying your
+license information after installation. This is done by typing the following
+at a command prompt:
+> splm -i studentSP4.3di.uminho.pt
+> splm -a sicstus4.3_solaris permanent 885b-bd4p-cx46-a9yc-uxa8
+
+
+Your license information for platform 'darwin' is as follows:
+Decryption key: mugeujvbbuwm
+Site name:  studentSP4.3di.uminho.pt
+License code: ba88-bd4p-cx46-bu29-pz8o
+Expiration date: permanent
+This information is entered either during installation or by modifying your
+license information after installation. This is done by typing the following
+at a command prompt:
+> splm -i studentSP4.3di.uminho.pt
+> splm -a sicstus4.3_darwin permanent ba88-bd4p-cx46-bu29-pz8o
+
+
+Your license information for platform 'linux' is as follows:
+Decryption key: bmgghubktwqz
+Site name:  studentSP4.3di.uminho.pt
+License code: f42e-bd4p-cx46-cbyd-cg8d
+Gmail - SICStus 4.3 license information for studentSP4.3di.uminho.pt https://mail.google.com/mail/u/1/?ui=2&ik=cf94331505&view=pt&q=sics...
+1 de 2 02-06-2014 18:12
+Expiration date: permanent
+This information is entered either during installation or by modifying your
+license information after installation. This is done by typing the following
+at a command prompt:
+> splm -i studentSP4.3di.uminho.pt
+> splm -a sicstus4.3_linux permanent f42e-bd4p-cx46-cbyd-cg8d
+
+
+Your license information for platform 'win32' is as follows:
+Decryption key: imgmepruwavp
+Site name:  studentSP4.3di.uminho.pt
+License code: c39c-bd4p-cx46-bey9-y64f
+Expiration date: permanent
