@@ -1,0 +1,3 @@
+Imprimir linhas 40 a 50 de um ficheiro
+
+head -n 50 dummy.txt | tail -n 11
