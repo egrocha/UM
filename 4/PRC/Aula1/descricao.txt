@@ -1,0 +1,55 @@
+Avaliação:
+10% - Opinião do professor
+20% - TPCs
+40% - Projeto (individual ou em grupo)
+30% - Testes (1 ou 2)
+
+Ferramentas:
+GraphDB (complementado com MongoDB)
+Protégé
+rapper
+RDF
+RDFS
+OWL
+SPARQL
+
+Uma ontologia é uma representação formal 
+de conhecimento
+
+Pluto -----is a-----> Planeta
+Pluto -----gira volta-----> Sol
+Sol -----is a-----> Astro
+
+Recurso:
+- pode ser qualquer coisa
+- identificado unicamente pelo URI
+Descrição:
+- descrição de recursos
+Framework:
+- combinação de web based protocols
+- baseados em modelo formal
+
+RDF - Resource Description Framework
+Conhecimento em RDF é descrito como uma lista 
+de triplos
+Ex: 
+Pluto is_a Planeta .
+Sol is_a Astro .
+Pluto gira_volta Sol;
+      descoberto_em "1930" .
+lista temElemento elem1 ,
+                  elem2 , 
+                  elem3 .
+
+RDF Statement: Subject + Property + Object/Value
+                 URI   +    URI   +  URI/Literal
+
+URI - Uniform Resource Identifier
+Resource - qualquer objeto com uma identidade clara
+(Ex: web page, imagem, documento)
+
+URL - identifica o que existe na web
+URI - identifica na web o que existe
+
+TPC1 - Converter XML em RDF
+http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/jcrpubs.xml
