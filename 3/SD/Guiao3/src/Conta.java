@@ -3,17 +3,19 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Conta {
 
     private ReentrantLock lock = new ReentrantLock();
-    private int valor = 0;
+    private double valor = 0;
+    private int id = 0;
 
-    Conta(){
-
+    Conta(int id, double valorInicial){
+        this.id = id;
+        this.valor = valorInicial;
     }
 
-    public int getValor(){
+    public double getValor(){
         return this.valor;
     }
 
-    public void addValor(int valor){
+    public void addValor(double valor){
         lock.lock();
         this.valor += valor;
         lock.unlock();

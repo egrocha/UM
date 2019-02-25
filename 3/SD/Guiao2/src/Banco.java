@@ -2,6 +2,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Banco {
 
+    private ReentrantLock lock = new ReentrantLock();
     private Conta contas[];
 
     Banco(int numContas){
@@ -18,20 +19,20 @@ public class Banco {
     }
 
     private void depositar(int conta, int valor){
-        synchronized (contas[conta]) {
-            contas[conta].addValor(valor);
-        }
+        contas[conta].addValor(valor);
     }
 
     private void levantar(int conta, int valor){
-        synchronized (contas[conta]) {
-            contas[conta].remValor(valor);
-        }
+        contas[conta].remValor(valor);
     }
 
     public void transferir(int contaLev, int contaDep, int valor) throws InterruptedException {
+        contas[contaLev].lock();
+        contas[contaDep].lock();
         depositar(contaDep, valor);
         levantar(contaLev, valor);
+        contas[contaDep].unlock();
+        contas[contaLev].unlock();
     }
 
 }
