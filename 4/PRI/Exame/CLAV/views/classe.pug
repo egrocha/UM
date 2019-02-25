@@ -1,0 +1,82 @@
+extends layout
+
+block content
+	.w3-container
+		.w3-card-4
+			header.w3-container.w3-grey
+				h3 Classe
+			table.w3-table-all
+				each c in classe
+					tr
+						th Código
+						td= c.codigo
+					tr
+						th Título
+						td= c.titulo
+					tr
+						if c.tituloPai
+							th Título Pai
+							td= c.tituloPai
+					tr
+						if c.pt
+							th PT
+							td= c.pt
+					tr
+						if c.procTipo
+							th Tipo de Processo
+							td= c.procTipo
+					tr
+						if c.pai
+							th Pai
+							td= c.pai
+					tr
+						if c.codigoPai
+							th Código Pai
+							td= c.codigoPai
+					tr
+						if c.procTrans
+							th Proc. Trans.
+							td= c.procTrans
+					tr
+						th Status
+						td= c.status
+					tr
+						th Decrição
+						td= c.desc
+					if c.procTrans
+						table.w3-table-all
+							tr
+								th Tipo do Dono
+								th Sigla do Dono
+								th Designação do Dono
+								th ID do Dono
+							each dono in donos
+								tr
+									td= dono.tipo
+									td= dono.sigla
+									td= dono.designacao
+									td= dono.id
+			header.w3-container.w3-grey
+				h3 Descendentes
+			table.w3-table-all
+				tr
+					th Código
+					th Título
+					th ID
+				each d in descendentes
+					tr
+						td
+							a(href='/classe/'+d.codigo)= d.codigo
+						td
+							p= d.titulo
+						td
+							p= d.id
+				else
+					.w3-container
+						p Não existem descendentes para esta classe
+			if url
+				footer.w3-container.w3-grey
+					a(href='/classe'+url) Página anterior
+			p
+			footer.w3-container.w3-grey
+				a(href='/') Voltar à página inicial

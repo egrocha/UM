@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .w3-container
+    .w3-card-4
+      header.w3-container.w3-grey
+        h3 Aplicação CLAV
+      .w3-container
+        p Esta aplicação foi gerada como parte do Exame de PRI para navegar a informação pertencente ao sistema CLAV: Classificação e Avaliação da Informação Pública
+    table.w3-table-all
+      tr
+        th Código
+        th Título
+        th ID
+      each f in funcoes
+        tr
+          td
+            a(href='/classe/'+f.codigo)= f.codigo
+          td
+            p= f.titulo
+          td
+            p= f.id
+    footer.w3-container.w3-grey
+      p Aplicação CLAV

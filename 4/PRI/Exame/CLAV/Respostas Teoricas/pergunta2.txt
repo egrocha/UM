@@ -1,0 +1,38 @@
+Pergunta 2: Quantos subprocessos existem na 
+descendência de 750.10?
+
+Resposta: 4 no total, 2 na descendência de 750.10.001
+e dois na descendência de 750.10.600
+
+[
+    {
+        "codigo": "750.10.001",
+        "titulo": "Seleção e seriação para ingresso no ensino ou formação",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c750.10.001"
+    },
+    {
+        "codigo": "750.10.002",
+        "titulo": "Processamento de matrículas ou inscrições no ensino ou em formação",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c750.10.002"
+    },
+    {
+        "codigo": "750.10.300",
+        "titulo": "Processamento dos dados cadastrais de alunos ou formandos",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c750.10.300"
+    },
+    {
+        "codigo": "750.10.601",
+        "titulo": "Processamento de pedidos de admissão a provas de avaliação",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c750.10.601"
+    },
+    {
+        "codigo": "750.10.602",
+        "titulo": "Integração e acompanhamento de alunos com necessidades educativas especiais",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c750.10.602"
+    },
+    {
+        "codigo": "750.10.600",
+        "titulo": "Controlo de assiduidade de alunos ou formandos",
+        "id": "http://jcr.di.uminho.pt/m51-clav#c750.10.600"
+    }
+]

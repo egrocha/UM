@@ -1,0 +1,16 @@
+{
+  "name": "aula6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server-aluno-1.js",
+  "scripts": {
+    "start": "node server-aluno-1.js",
+    "dev": "nodemon server-aluno-1.js"
+  },
+  "author": "jcr",
+  "license": "ISC",
+  "dependencies": {
+    "jsonfile": "^5.0.0",
+    "pug": "^2.0.3"
+  }
+}
