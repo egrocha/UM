@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  .w3-container
+    .w3-card-4
+      header.w3-container.w3-blue
+        h3 myTwitter
+      .w3-container
+        form.w3-container(action='/', method='POST')
+          label.w3-text-blue
+            b Tweet
+          input.w3-input.w3-border.w3-light-grey(type='text', name='texto')
+          label.w3-text-blue
+            b Autor
+          input.w3-input.w3-border.w3-light-grey(type='text', name='autor')
+          label.w3-text-blue
+            b Hash
+          input.w3-input.w3-border.w3-light-grey(type='text', name='hash')
+          br
+          input.w3-btn.w3-grey(type='submit', value='Enviar')
+  .w3-container
+    .w3-card-4
+      header.w3-container.w3-blue
+        h3 Discussões
+      .w3-container
+        each t in tweets
+          br
+          b Autor: 
+          b= t.autor
+          br
+          b Hash: 
+          b= t.hash
+          br
+          emp Texto: 
+          emp= t.texto
+          br
+          emp Likes: 
+          emp= t.likes
+          br
+          a(class='button', href='/like'+t._id) Like
+          hr
+      footer.w3-container.w3-blue
+        address Gerado por myTwitter
